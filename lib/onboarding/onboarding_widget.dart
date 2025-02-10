@@ -296,7 +296,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                 letterSpacing: 0.0,
                                 fontWeight: FontWeight.w500,
                               ),
-                          hintText: 'Hometown...',
+                          hintText: 'City...',
                           hintStyle:
                               FlutterFlowTheme.of(context).labelLarge.override(
                                     fontFamily: 'Inter',
@@ -445,7 +445,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                   await currentUserReference!.update(createUsersRecordData(
                     displayName: _model.textController1.text,
                     birthday: _model.datePicked,
-                    hometown: _model.textController2.text,
+                    city: _model.textController2.text,
                   ));
 
                   context.goNamed('tasks');

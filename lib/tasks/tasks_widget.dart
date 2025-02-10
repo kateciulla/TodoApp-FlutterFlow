@@ -2,6 +2,7 @@ import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/components/add_task_widget.dart';
 import '/components/task_widget.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -172,6 +173,22 @@ class _TasksWidgetState extends State<TasksWidget> {
                         );
                       },
                     );
+                  },
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(14.0, 0.0, 0.0, 0.0),
+                child: FlutterFlowIconButton(
+                  borderRadius: 8.0,
+                  buttonSize: 50.0,
+                  fillColor: FlutterFlowTheme.of(context).primary,
+                  icon: Icon(
+                    Icons.logout,
+                    color: FlutterFlowTheme.of(context).primaryText,
+                    size: 30.0,
+                  ),
+                  onPressed: () async {
+                    context.pushNamed('login');
                   },
                 ),
               ),
