@@ -55,10 +55,10 @@ class UsersRecord extends FirestoreRecord {
   String get socialMediaHandle => _socialMediaHandle ?? '';
   bool hasSocialMediaHandle() => _socialMediaHandle != null;
 
-  // "hometown" field.
-  String? _hometown;
-  String get hometown => _hometown ?? '';
-  bool hasHometown() => _hometown != null;
+  // "city" field.
+  String? _city;
+  String get city => _city ?? '';
+  bool hasCity() => _city != null;
 
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
@@ -69,7 +69,7 @@ class UsersRecord extends FirestoreRecord {
     _phoneNumber = snapshotData['phone_number'] as String?;
     _birthday = snapshotData['birthday'] as DateTime?;
     _socialMediaHandle = snapshotData['social_media_handle'] as String?;
-    _hometown = snapshotData['hometown'] as String?;
+    _city = snapshotData['city'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -114,7 +114,7 @@ Map<String, dynamic> createUsersRecordData({
   String? phoneNumber,
   DateTime? birthday,
   String? socialMediaHandle,
-  String? hometown,
+  String? city,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -126,7 +126,7 @@ Map<String, dynamic> createUsersRecordData({
       'phone_number': phoneNumber,
       'birthday': birthday,
       'social_media_handle': socialMediaHandle,
-      'hometown': hometown,
+      'city': city,
     }.withoutNulls,
   );
 
@@ -146,7 +146,7 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e1?.phoneNumber == e2?.phoneNumber &&
         e1?.birthday == e2?.birthday &&
         e1?.socialMediaHandle == e2?.socialMediaHandle &&
-        e1?.hometown == e2?.hometown;
+        e1?.city == e2?.city;
   }
 
   @override
@@ -159,7 +159,7 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e?.phoneNumber,
         e?.birthday,
         e?.socialMediaHandle,
-        e?.hometown
+        e?.city
       ]);
 
   @override
