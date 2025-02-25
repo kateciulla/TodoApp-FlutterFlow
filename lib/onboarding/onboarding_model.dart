@@ -1,8 +1,13 @@
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'onboarding_widget.dart' show OnboardingWidget;
 import 'package:flutter/material.dart';
 
 class OnboardingModel extends FlutterFlowModel<OnboardingWidget> {
+  ///  Local state fields for this page.
+
+  String testapi = ' ';
+
   ///  State fields for stateful widgets in this page.
 
   bool isDataUploading = false;
